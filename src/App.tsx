@@ -35,7 +35,7 @@ function Header() {
   return (
     <header className="header">
       <div className="header-content">
-        <h1>Christopher Santamaria Marquez de Software</h1>
+        <h1>Edefensa DAs</h1>
         <p>Pagina principal descriptiva de la practica de Das sobre CI/CD.</p>
       </div>
     </header>
