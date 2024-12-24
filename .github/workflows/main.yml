@@ -1,34 +1,20 @@
-name: CI Workflow
-
-on:
+name: Deploy Practica
+on: 
   push:
     branches:
-      - master  # Cambiado de 'main' a 'master'
+      - master
   pull_request:
     branches:
-      - master  # PRs dirigidos a la rama 'master'
+      - master
 
 jobs:
-  build-and-test:
+  Explore-GitHub-Actions:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Check out code
-        uses: actions/checkout@v3
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
       - name: Install dependencies
         run: npm install
-
-      - name: Run Lint
-        run: npm run lint
-
-      - name: Run Tests
-        run: npm test
-
-      - name: Build
+      - name: Bundle
         run: npm run build
